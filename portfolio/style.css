@@ -48,18 +48,16 @@
     border-radius: 5px;
 }
 
-h1 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: blue;
-}
 body {
     background-color: #FFF2D8;
 }
 * {
     color: #113946;
+    
 }
 h1 {
     color: #113946;
     border: solid #BCA37F;
     text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
