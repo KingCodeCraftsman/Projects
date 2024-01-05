@@ -99,7 +99,94 @@
         
         </section>
         <!--color mixer end-->
-        
+
+         <!--adding html form for hair product recommendation-->
+    <form id="hairProductForm">
+        <label for="symptoms">Enter your hair symptoms:</label>
+        <input type="text" id="symptoms" name="symptoms">
+        <button type="button" onclick="recommendProduct()">Product Recommendation</button>
+    </form>
+     <!--script for hair product recommendation-->
+     <!--working on adding a funtion to recommend certain products based on hair problems !!HAS A BUG!!-->
+    <script>
+        const hairProducts = [
+            {
+                name: 'Moisturizing Shampoo',
+                symptoms: ['dry' , 'frizzy'],
+            },
+            {
+                name: 'Repairing Conditioner',
+                symptoms: ['damaged', 'split ends'],
+            },
+            {
+                name: 'Volumizing Mousse',
+                symptoms: ['flat', 'no volume'],
+            },
+        ]; 
+        //symptoms adding end
+
+        function findHairProduct(userSymptoms) {
+            //filtering products based on the symptoms
+            const matchingProducts = hairProducts.filter(product => userSymptoms.some(symptom => product.symptoms.includes(symptom))
+            );
+            //returning matching product
+            return matchingProducts.length > 0 ? matchingProducts[0] : null;
+        }
+
+        //handling user imput
+        const userImputSymptoms = [ 'dry', 'frizzy'];
+
+        //calling function with user imput
+        const selectedProduct = findHairProduct(userImputSymptoms);
+
+        //check product was found display results
+        if (selectedProduct) {
+            console.log(`Recommended product: ${selectedProduct.name}`);
+        } else {
+            console.log('No matching product found.');
+        }
+
+        //script to handle form submission 
+        /*function recommendProduct() {
+            console.log('Function called'); // make sure to remove this line when done debugging //
+            const userImput = document.getElementById('symptoms').value.split(',').map(symptom => symptom.trim());
+            const selectedProduct = findHairProduct(userImput);
+
+            if (selectedProduct) {
+                alert(`Recommended Product: ${selectedProduct.name}`);
+            } else {
+                alert('No matching product found.');
+            }
+        }  */
+        //make sure to remove this is for debugging below
+        function recommendProduct() {
+    console.log('Function called'); // Log that the function is called
+
+    // Attempt to get the user input
+    const userInputElement = document.getElementById('symptoms');
+    if (!userInputElement) {
+        console.error('Error: Could not find the input element with ID "symptoms".');
+        return;
+    }
+
+    const userInput = userInputElement.value.split(',').map(symptom => symptom.trim());
+    console.log('User input:', userInput); // Log the user input
+
+    const selectedProduct = findHairProduct(userInput);
+
+    if (selectedProduct) {
+        alert(`Recommended Product: ${selectedProduct.name}`);
+    } else {
+        alert('No matching product found.');
+    }
+}
+
+        //end of debugging
+
+          
+    </script>
+       <!--end of product recommendation-->
+
         <section id="contact">
             <h2>Contact Us</h2>
             <form id="contactForm">
@@ -154,15 +241,8 @@
             return hex.length == 1 ? "0" + hex : hex;
         }
     </script>
-    <!--working on adding a funtion to recommend certain products based on hair problems-->
-    <script>
-        const hairProducts = [
-            {
-                name: 'Moisturizing Shampoo',
-                symptoms: ['dry' , 'frizzy'],
-            }
-        ]
-    </script>
+    
+   
 </body>
 </html>
 
