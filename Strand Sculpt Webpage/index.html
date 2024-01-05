@@ -107,7 +107,7 @@
         <button type="button" onclick="recommendProduct()">Product Recommendation</button>
     </form>
      <!--script for hair product recommendation-->
-     <!--working on adding a funtion to recommend certain products based on hair problems !!HAS A BUG!!-->
+     <!-- !!Fixed BUG but still needs additional work!!-->
     <script>
         const hairProducts = [
             {
@@ -147,8 +147,7 @@
         }
 
         //script to handle form submission 
-        /*function recommendProduct() {
-            console.log('Function called'); // make sure to remove this line when done debugging //
+        function recommendProduct() {
             const userImput = document.getElementById('symptoms').value.split(',').map(symptom => symptom.trim());
             const selectedProduct = findHairProduct(userImput);
 
@@ -157,35 +156,14 @@
             } else {
                 alert('No matching product found.');
             }
-        }  */
-        //make sure to remove this is for debugging below
-        function recommendProduct() {
-    console.log('Function called'); // Log that the function is called
+        }  
+      
 
-    // Attempt to get the user input
-    const userInputElement = document.getElementById('symptoms');
-    if (!userInputElement) {
-        console.error('Error: Could not find the input element with ID "symptoms".');
-        return;
-    }
-
-    const userInput = userInputElement.value.split(',').map(symptom => symptom.trim());
-    console.log('User input:', userInput); // Log the user input
-
-    const selectedProduct = findHairProduct(userInput);
-
-    if (selectedProduct) {
-        alert(`Recommended Product: ${selectedProduct.name}`);
-    } else {
-        alert('No matching product found.');
-    }
-}
-
-        //end of debugging
 
           
     </script>
        <!--end of product recommendation-->
+       
 
         <section id="contact">
             <h2>Contact Us</h2>
