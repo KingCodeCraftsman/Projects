@@ -3,8 +3,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #F5EBEB;
+    
 }
 
 header {
@@ -51,4 +51,33 @@ footer {
     color: #fff;
     padding: 1em;
     text-align: center;
+}
+.colorwheel {
+    width: 750px;
+    margin: 20px;
+    background-color: #867070;
+    padding: 20px;
+}
+.levels {
+    width: 750px;
+    margin: 20px;
+    background-color: #867070;
+    padding: 20px;
+}
+.hairimg {
+    width: 750px;
+    height: 800px;
+    margin: 20px;
+    background-color: #867070;
+    padding: 20px;
+    
+}
+.boxed-section {
+    border: 2px solid #b51b5c;
+    box-shadow: 0 0 30px ;
+    display: inline-block;
+    padding: 10px; 
+    margin-bottom: 10px; 
+    text-align: left;
+    
 }
