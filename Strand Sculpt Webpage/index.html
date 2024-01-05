@@ -100,19 +100,40 @@
         </section>
         <!--color mixer end-->
 
-         <!--adding html form for hair product recommendation-->
+         <!--adding html form for hair product recommendation !!-->
+
     <form id="hairProductForm">
-        <label for="symptoms">Enter your hair symptoms:</label>
-        <input type="text" id="symptoms" name="symptoms">
+        <label for="hairType">Select your hair type:</label>
+        <select id="hairType" name="hairType">
+            <option value="curly">Curly</option>
+            <option value="thin">Thin</option>
+            <option value="straight">Straight</option>
+            <!-- Add more options as needed -->
+        </select>
+    
+        <label for="hairCondition">Select your hair condition:</label>
+        <select id="hairCondition" name="hairCondition">
+            <option value="frizzy">Frizzy</option>
+            <option value="split-ends">Split Ends</option>
+            <option value="no-volume">No Volume</option>
+            <option value="dry">Dry</option>
+            <option value="damaged">Damaged</option>
+            <option value="flat">Flat</option>
+            <!-- Add more options as needed -->
+        </select>
+    
         <button type="button" onclick="recommendProduct()">Product Recommendation</button>
     </form>
-     <!--script for hair product recommendation-->
-     <!-- !!Fixed BUG but still needs additional work!!-->
-    <script>
+    <!--end of hair product form!!-->
+
+   
+
+       <!--this is the javascript that goes with  product recommendation-->
+       <script>
         const hairProducts = [
             {
                 name: 'Moisturizing Shampoo',
-                symptoms: ['dry' , 'frizzy'],
+                symptoms: ['dry', 'frizzy'],
             },
             {
                 name: 'Repairing Conditioner',
@@ -122,48 +143,37 @@
                 name: 'Volumizing Mousse',
                 symptoms: ['flat', 'no volume'],
             },
-        ]; 
-        //symptoms adding end
-
+        ];
+    
         function findHairProduct(userSymptoms) {
-            //filtering products based on the symptoms
-            const matchingProducts = hairProducts.filter(product => userSymptoms.some(symptom => product.symptoms.includes(symptom))
+            const matchingProducts = hairProducts.filter(product =>
+                userSymptoms.some(symptom => product.symptoms.includes(symptom))
             );
-            //returning matching product
             return matchingProducts.length > 0 ? matchingProducts[0] : null;
         }
-
-        //handling user imput
-        const userImputSymptoms = [ 'dry', 'frizzy'];
-
-        //calling function with user imput
-        const selectedProduct = findHairProduct(userImputSymptoms);
-
-        //check product was found display results
-        if (selectedProduct) {
-            console.log(`Recommended product: ${selectedProduct.name}`);
-        } else {
-            console.log('No matching product found.');
-        }
-
-        //script to handle form submission 
+    
         function recommendProduct() {
-            const userImput = document.getElementById('symptoms').value.split(',').map(symptom => symptom.trim());
-            const selectedProduct = findHairProduct(userImput);
-
+            const hairTypeSelect = document.getElementById('hairType');
+            const hairConditionSelect = document.getElementById('hairCondition');
+    
+            const selectedHairType = hairTypeSelect.value;
+            const selectedHairCondition = hairConditionSelect.value;
+    
+            // Convert selected values into an array
+            const userImputSymptoms = [selectedHairType, selectedHairCondition];
+    
+            const selectedProduct = findHairProduct(userImputSymptoms);
+    
             if (selectedProduct) {
                 alert(`Recommended Product: ${selectedProduct.name}`);
             } else {
                 alert('No matching product found.');
             }
-        }  
-      
-
-
-          
+        }
     </script>
-       <!--end of product recommendation-->
-       
+    
+       <!-- end of script for product recommendation !!-->
+
 
         <section id="contact">
             <h2>Contact Us</h2>
@@ -219,6 +229,7 @@
             return hex.length == 1 ? "0" + hex : hex;
         }
     </script>
+    <!--end of color mixer-->
     
    
 </body>

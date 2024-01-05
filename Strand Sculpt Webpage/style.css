@@ -127,3 +127,12 @@ button:hover {
     border-radius: 5px;
     background-color: #fff;
 }
+#hairProductForm {
+    height: 100px;
+    background-color: #867070;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 40px #b51b5c;
+    text-align: center;
+    
+}
