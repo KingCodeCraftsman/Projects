@@ -7,12 +7,46 @@ body {
     
 }
 
+/* Adding awesome style to the h1!!*/
+@keyframes move {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(20px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes glow {
+    0% {
+      text-shadow: 0 0 10px #fff, 0 0 20px #00cfff, 0 0 30px #00cfff;
+    }
+    50% {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff00e6, 0 0 40px #ff00e6;
+    }
+    100% {
+      text-shadow: 0 0 10px #fff, 0 0 20px #00cfff, 0 0 30px #00cfff;
+    }
+  }
+  
+  h1 {
+    font-size: 3em;
+    color: #fff;
+    text-align: center;
+    margin: 50px 0;
+    animation: move 3s infinite alternate, glow 3s infinite;
+  }
+  
+
 header {
     background-color: #D5B4B4;
     color: #fff;
     padding: 1em;
     text-align: center;
-    height: 140px;
+    height: 215px;
 }
 
 nav {

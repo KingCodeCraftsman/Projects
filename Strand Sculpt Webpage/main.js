@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var header = document.querySelector('header');
 
     // Define an array of colors
-    var colors = ['#867070', '#D5B4B4', '#E4D0D0', '#F5EBEB'];
+    var colors = ['#867070', '#D5B4B4', '#E4D0D0'];
 
     changeColorBtn.addEventListener('click', function () {
         // Get a random index to pick a color from the array
