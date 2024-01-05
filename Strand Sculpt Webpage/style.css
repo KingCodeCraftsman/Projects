@@ -8,10 +8,11 @@ body {
 }
 
 header {
-    background-color: #007bff;
+    background-color: #D5B4B4;
     color: #fff;
     padding: 1em;
     text-align: center;
+    height: 140px;
 }
 
 nav {
@@ -105,7 +106,7 @@ input[type="color"] {
 }
 
 button {
-    background-color: #3498db;
+    background-color: #867070;
     color: #fff;
     border: none;
     padding: 10px 20px;

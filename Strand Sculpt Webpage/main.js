@@ -1,10 +1,16 @@
 
+
 document.addEventListener('DOMContentLoaded', function () {
     var changeColorBtn = document.getElementById('changeColorBtn');
     var header = document.querySelector('header');
 
+    // Define an array of colors
+    var colors = ['#867070', '#D5B4B4', '#E4D0D0', '#F5EBEB'];
+
     changeColorBtn.addEventListener('click', function () {
-        header.style.backgroundColor = getRandomColor();
+        // Get a random index to pick a color from the array
+        var randomIndex = Math.floor(Math.random() * colors.length);
+        header.style.backgroundColor = colors[randomIndex];
     });
 
     var contactForm = document.getElementById('contactForm');
@@ -12,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
     contactForm.addEventListener('submit', function (event) {
         event.preventDefault();
 
-       
         var name = document.getElementById('name').value;
         var email = document.getElementById('email').value;
         var message = document.getElementById('message').value;
@@ -26,18 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         //  AJAX code here to submit the form data to a server.
     });
-
-    function getRandomColor() {
-        var letters = '0123456789ABCDEF';
-        var color = '#';
-        for (var i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-    }
-
 });
-
 
 
 
