@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function () {
     var changeColorBtn = document.getElementById('changeColorBtn');
     var header = document.querySelector('header');
@@ -34,4 +35,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         return color;
     }
+
 });
+
+
+
+

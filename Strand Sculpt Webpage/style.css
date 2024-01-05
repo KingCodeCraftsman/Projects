@@ -81,3 +81,48 @@ footer {
     text-align: left;
     
 }
+/* Adding color mixer style */
+.container {
+    background-color: #867070;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 40px #b51b5c;
+    text-align: center;
+}
+form {
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+input[type="color"] {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#resultColor {
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}

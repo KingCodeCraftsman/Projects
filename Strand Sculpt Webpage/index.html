@@ -36,31 +36,31 @@
         <section id="about">
             <h2>What can this website offer you?</h2>
             <div class="boxed-section">
-                <p>• Notes from consultation</p>
+                <p>Notes from consultation</p>
             </div>
             <div class="boxed-section">
-                <p>• Determines starting level</p>
+                <p> Determines starting level</p>
             </div>
             <div class="boxed-section">
-                <p>• Allows you to share with other user's you favorite techniques</p>
+                <p> Allows you to share with other user's you favorite techniques</p>
             </div>
             <div class="boxed-section">
-                <p>• Appointment reminders</p>
+                <p>Appointment reminders</p>
             </div>
             <div class="boxed-section">
-                <p>• Informs you of underlying pigments of hair levels</p>
+                <p> Informs you of underlying pigments of hair levels</p>
             </div>
             <div class="boxed-section">
-                <p>• Allows you to also communicate with other proffesionals to gain knowledge</p>
+                <p> Allows you to also communicate with other proffesionals to gain knowledge</p>
             </div>
             <div class="boxed-section">
-                <p>• Suggests what level of tone should be used</p>
+                <p>Suggests what level of tone should be used</p>
             </div>
             <div class="boxed-section">
-                <p>• Store client info</p>
+                <p>Store client info</p>
             </div>
             <div class="boxed-section">
-                <p>• Storage of favorite formula's</p>
+                <p>Storage of favorite formula's</p>
             </div>
             <div class="boxed-section">
                 <p>Allows you to build a protfolio</p>
@@ -79,7 +79,26 @@
             <img src="./assets/images/colorwheel.png" alt="colorwheel" class="colorwheel">
             <img src="./assets/images/levels.png" alt="levels" class="levels">
         </section>
-
+        <!--adding color mixer-->
+        <section>
+            <div class="container">
+                <h1>Hair Color Mixer</h1>
+        
+                <form id="colorForm">
+                    <label for="colorInput1">Select Hair Color 1:</label>
+                    <input type="color" id="colorInput1" value="#ff0000">
+        
+                    <label for="colorInput2">Select Hair Color 2:</label>
+                    <input type="color" id="colorInput2" value="#00ff00">
+        
+                    <button type="button" onclick="mixColors()">Mix Colors</button>
+                </form>
+        
+                <div id="resultColor"></div>
+            </div>
+        
+        </section>
+        <!--color mixer end-->
         
         <section id="contact">
             <h2>Contact Us</h2>
@@ -101,6 +120,40 @@
     <footer>
         <p>Contact us at: contact@example.com</p>
     </footer>
+    <!--adding color mixer javascript-->
+    <script>
+        function mixColors() {
+            var color1 = document.getElementById("colorInput1").value;
+            var color2 = document.getElementById("colorInput2").value;
+
+            var mixedColor = averageColor(color1, color2);
+
+            var resultColorElement = document.getElementById("resultColor");
+            resultColorElement.style.backgroundColor = mixedColor;
+            resultColorElement.innerText = "Mixed Color: " + mixedColor;
+        }
+
+        function averageColor(color1, color2) {
+            var r1 = parseInt(color1.substr(1, 2), 16);
+            var g1 = parseInt(color1.substr(3, 2), 16);
+            var b1 = parseInt(color1.substr(5, 2), 16);
+
+            var r2 = parseInt(color2.substr(1, 2), 16);
+            var g2 = parseInt(color2.substr(3, 2), 16);
+            var b2 = parseInt(color2.substr(5, 2), 16);
+
+            var avgR = Math.round((r1 + r2) / 2);
+            var avgG = Math.round((g1 + g2) / 2);
+            var avgB = Math.round((b1 + b2) / 2);
+
+            return "#" + componentToHex(avgR) + componentToHex(avgG) + componentToHex(avgB);
+        }
+
+        function componentToHex(c) {
+            var hex = c.toString(16);
+            return hex.length == 1 ? "0" + hex : hex;
+        }
+    </script>
 </body>
 </html>
 
