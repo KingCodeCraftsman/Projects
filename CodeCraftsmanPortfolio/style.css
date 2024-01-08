@@ -1518,7 +1518,7 @@ input, select, textarea {
 		-webkit-transition: background .2s ease-in-out, box-shadow .2s ease-in-out;
 		-ms-transition: background .2s ease-in-out, box-shadow .2s ease-in-out;
 		transition: background .2s ease-in-out, box-shadow .2s ease-in-out;
-		-webkit-appearance: none;
+		
 		display: block;
 		border: 0;
 		padding: 0.75em;
@@ -1668,7 +1668,7 @@ input, select, textarea {
 		-webkit-transition: background-color .2s ease-in-out;
 		-ms-transition: background-color .2s ease-in-out;
 		transition: background-color .2s ease-in-out;
-		-webkit-appearance: none;
+		
 		position: relative;
 		display: inline-block;
 		color: #fff !important;
