@@ -6,7 +6,29 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="style.css" />
+
 		
+		<!--adding smooth scroll-->
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+			  // Smooth scroll function
+			  function scrollToElement(elementId) {
+				document.getElementById(elementId).scrollIntoView({
+				  behavior: "smooth",
+				});
+			  }
+	  
+			  // Add smooth scroll event listeners to navigation links
+			  document.querySelectorAll(".smooth-scroll").forEach(function (link) {
+				link.addEventListener("click", function (event) {
+				  event.preventDefault();
+				  var targetId = this.getAttribute("href").substring(1);
+				  scrollToElement(targetId);
+				});
+			  });
+			});
+		  </script>
+
 	</head>
 	<body class="is-preload">
 
