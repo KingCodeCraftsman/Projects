@@ -1702,7 +1702,7 @@ input, select, textarea {
 		button:active,
 		.button:active {
 			background-color: #3BA8D3;
-			top: 2px;
+			top: 1px;
 		}
 
 		input[type="button"].large,
