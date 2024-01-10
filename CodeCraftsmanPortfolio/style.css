@@ -2423,35 +2423,10 @@ input, select, textarea {
 						margin-top: 0;
 					}
         /* skills*/
-	}.skills-bar {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
 	}
 	
-	.skill {
-		width: 48%;
-		background-color: #43B3E0;
-		padding: 10px;
-		margin-bottom: 10px;
-	}
 	
-	.skill-name {
-		font-weight: bold;
-	}
-	
-	.skill-level {
-		background-color: white;
-		color: #B80000;
-		padding: 5px;
-		border-radius: 5px;
-		text-align: center;
-	}
-
-	
-
-
-    .certifications-list  {
+	 .certifications-list  {
         background-color: white;
 		box-shadow: #0062DB;
 		padding: 25px;
@@ -2460,4 +2435,42 @@ input, select, textarea {
 
 		
     }
+	.boxed-section {
+		border: 2px solid #3498db; 
+		box-shadow: 0 0 30px black; 
+		display: inline-block;
+		padding: 15px; 
+		margin: 10px; 
+		text-align: left;
+		transition: transform 0.3s ease; 
+	}
+	
+	/* Add hover effect */
+	.boxed-section:hover {
+		transform: scale(1.05);
+	}
+	
+	/* Media query for responsiveness */
+	@media (max-width: 600px) {
+		.boxed-section {
+			width: 100%; 
+			margin: 10px 0; 
+		}
+	}
 
+	/* Style for the skill text */
+.skill-text {
+    
+    margin-top: x;
+	inset-block-end: 0;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #000;
+	text-align: center;
+}
+
+	
