@@ -1,0 +1,63 @@
+body {
+    text-align: center;
+    background-color: #011F3F;
+  }
+  
+  #levels {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3rem;
+    margin:  5%;
+    color: #FEF2BF;
+  }
+  
+  .container {
+    display: block;
+    width: 50%;
+    margin: auto;
+  
+  }
+  
+  .btn {
+    margin: 25px;
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    border: 10px solid black;
+    border-radius: 20%;
+  }
+  
+  .game-over {
+    background-color: red;
+    opacity: 0.8;
+  }
+  
+  .duck {
+    background-color: rgb(231, 220, 220);
+    background-image: url(images/duckimg.png);
+    background-size: cover;
+  }
+  
+  .horse {
+    background-color: rgb(237, 242, 237);
+    background-image: url(images/horseimg.png);
+    background-size: cover;
+  }
+  
+  .pig {
+    background-color: rgb(251, 251, 252);
+    background-image: url(images/pigimg.png);
+    background-size: cover;
+  }
+  
+  .rooster {
+    background-color: rgb(235, 235, 232);
+    background-image: url(images/roosterimg.png);
+    background-size: cover;
+    s
+  }
+  
+  .pressed {
+    box-shadow: 0 0 20px white;
+    background-color: grey;
+  }
+  
